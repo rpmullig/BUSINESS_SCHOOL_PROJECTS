@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<favorite version="2.3.0.201301212158">
+<config name="default">
+<property name="GenerateAsHybridApp" value="true"/>
+<property name="GenerateJQueryMobileTheme" value="Theme b"/>
+<property name="DeployToSUP" value="true"/>
+<property name="BobName" value="S70031_Weather"/>
+<property name="GenerateLostFocusValidation" value="false"/>
+<property name="AssignWorkflowToDevice" value="true"/>
+<property name="DeviceUserName" value="S70031, S70001, S70002, S70101"/>
+<property name="DeploymentMode" value="Replace"/>
+<property name="GenerateToProjectLocation" value="true"/>
+<property name="GenerateAsPlatformSpecific" value="false"/>
+<property name="GenerateUsingOldAPI" value="false"/>
+<property name="GenerateDoConcatenation" value="false"/>
+<property name="Generate" value="true"/>
+<property name="TargetPlatforms" value=""/>
+<property name="SolutionDirectory" value="C:\Users\rpmullig\Desktop\SAP Mobile Development\C700_Weather\Generated Hybrid App"/>
+<property name="SupProfileName" value="My Mobile Server"/>
+</config>
+</favorite>

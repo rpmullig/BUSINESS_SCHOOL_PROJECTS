@@ -1,0 +1,165 @@
+/**
+ * Style sheet for MADigitPickerControl
+ */
+
+div.digitpicker-container{
+	width:100%;
+	valign: middle;	
+	display:block;
+}
+div.digitpicker-description{
+	text-align:left;
+	vertical-align: middle;
+	float:left;
+	padding-top: 12px; 
+	width:20%
+}
+
+div.digitpicker-value-button{
+	text-align:left;
+	vertical-align: middle;	
+	padding-top: 6px;	
+	float:left;	
+}
+
+input.digitpicker-value{
+	color :blue;	
+	position :relative;
+	right:2px;
+	top:6px;	
+	vertical-align: top;	
+	border:0px;
+	text-align:right;
+	font-size:16px;
+}
+
+a.digitpicker-button{
+	width: 30px;
+	height: 30px;		
+	background:transparent url(images/digitpicker-button.png) no-repeat center;	
+	border:0;
+	position :relative;
+	cursor :pointer;		
+	right:0px;
+	top:0px;	
+	float:right;	
+}
+
+#MADigitPickerControl{
+	background-color: transparent;
+	width: 330px;
+	height: 212px;
+	text-shadow: none;
+}
+
+#MADigitPickerControl div.calframe{
+	width: 100%;
+	height: 100%;
+	border: 0px;
+	/*background-color: buttonface;*/
+	text-align: center;
+	/*background-image: url(images/earth2.jpg);*/
+
+}
+
+#MADigitPickerControl div.x-layout-box-left {
+display: -webkit-box;
+position: relative;
+width:310px; 
+height: 100%;
+float:left;
+background: -webkit-gradient(linear, left top, left bottom, from(rgb(96,97,99)), to(rgb(16,24,44)), color-stop(0.5, rgb(105,109,120)), color-stop(0.5, rgb(58,60,68)));
+-moz-border-radius: 10px;
+border-radius: 10px 10px 5px 10px;
+}
+
+
+#MADigitPickerControl div.x-layout-box-left-inner {
+display: -webkit-box;
+position: relative;
+-webkit-box-orient: horizontal; 
+-webkit-box-direction: normal; 
+-webkit-box-pack: start; 
+-webkit-box-align: stretch;
+width:278px; 
+height: 144px;
+margin-top: 15px; 
+margin-left: 15px; 
+background-color: buttonface;
+background: -webkit-gradient(linear, left top, left bottom, from(rgb(88,88,92)), to(rgb(36,50,70)), color-stop(0.2, rgb(252,252,252)), color-stop(0.8, rgb(202,202,202)));
+}
+
+#MADigitPickerControl div.x-layout-box-right {
+position: relative;
+width:20px; 
+height: 100%;
+float:left;
+background:transparent url(images/digitpicker-bg-right.png) no-repeat bottom;
+filter:alpha(opacity=50);
+-moz-opacity:0.5;
+opacity: 0.5;
+
+}
+
+#MADigitPickerControl div.x-scroller {
+position: relative;
+}
+
+#MADigitPickerControl div.x-picker-slot {
+z-index: 2;
+position: relative;
+overflow:hidden !important;
+-webkit-box-shadow: rgba(0, 0, 0, 0.4) -1px 0 1px;
+ height: 50px; 
+padding-top: 51px; 
+padding-right: 0px; 
+padding-bottom: 51px; 
+padding-left: 0px;
+
+}
+
+#MADigitPickerControl div.x-picker-slot:first-child{
+-webkit-box-shadow:none;
+}
+
+#MADigitPickerControl div.x-picker-item {
+vertical-align: middle;
+height: 2.3em;
+line-height: 2.3em;
+font-weight: bold;
+padding: 0 10px 0 10px;
+text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;
+}
+
+#MADigitPickerControl div.x-picker-bar {
+border-top: .12em solid #06346A;
+border-bottom: .12em solid #06346A;
+height: 2.5em;
+background-color: rgba(6, 52, 106, 0.4);
+background-image: -webkit-gradient(linear,0% 0,0% 100%,color-stop(0%,rgba(22, 123, 243, 0.4)),color-stop(2%,rgba(8, 75, 155, 0.4)),color-stop(100%,rgba(4, 35, 72, 0.4)));
+background-image: linear-gradient(top,rgba(22, 123, 243, 0.4) 0,rgba(8, 75, 155, 0.4) 2%,rgba(4, 35, 72, 0.4) 100%);
+-webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 .2em .2em;
+}
+
+#MADigitPickerControl div.x-picker-mask {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+z-index: 3;
+display: -webkit-box;
+display: box;
+-webkit-box-align: stretch;
+box-align: stretch;
+-webkit-box-orient: vertical;
+box-orient: vertical;
+-webkit-box-pack: center;
+box-pack: center;
+pointer-events: none;
+}
+
+
+

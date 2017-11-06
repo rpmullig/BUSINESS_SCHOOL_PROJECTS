@@ -1,0 +1,9 @@
+!SESSION 2015-11-20 16:30:34.864 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_31
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.emf.ecore 2 0 2015-11-20 16:30:44.219
+!MESSAGE Both 'com.sybase.uep.xbw.diagram' and 'com.sybase.uep.xbw.diagram.screen' register an extension parser for 'xbw'

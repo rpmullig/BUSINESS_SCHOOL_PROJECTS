@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uepmodels:EMODiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:uepmodels="platform:/resource/com.sybase.uep.tooling.models/model/uepModels.ecore" modelVersion="2.3.0">
+  <rootPackage name="/" bundleVersionHistory="2.3.0.201301212158"/>
+</uepmodels:EMODiagram>

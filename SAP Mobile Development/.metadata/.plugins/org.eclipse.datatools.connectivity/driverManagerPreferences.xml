@@ -1,0 +1,13 @@
+#DriverManager.Preferences
+#Mon Nov 09 13:26:37 EST 2015
+org.eclipse.datatools.enablement.sybase.asa.drivertemplate10_sup=true
+org.eclipse.datatools.enablement.sybase.asa.drivertemplate12=true
+org.eclipse.datatools.enablement.sybase.asa.drivertemplate11=true
+org.eclipse.datatools.enablement.sybase.asa.drivertemplate12_sup=true
+org.eclipse.datatools.connectivity.db.sybase.ase.genericDriverTemplate_12_xa=true
+org.eclipse.datatools.enablement.sybase.asa.drivertemplate10=true
+org.eclipse.datatools.enablement.sybase.asa.drivertemplate11_sup=true
+org.eclipse.datatools.enablement.sybase.asa.drivertemplate=true
+org.eclipse.datatools.connectivity.db.sybase.ase.genericDriverTemplate_15_xa=true
+org.eclipse.datatools.connectivity.db.sybase.ase.genericDriverTemplate_15=true
+org.eclipse.datatools.connectivity.db.sybase.ase.genericDriverTemplate_12=true

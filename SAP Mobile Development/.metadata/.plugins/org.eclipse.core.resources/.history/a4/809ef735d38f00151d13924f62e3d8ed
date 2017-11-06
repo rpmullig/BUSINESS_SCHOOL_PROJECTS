@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:xbw="http://xbw/1.0">
+  <xbw:XmlBobDocument xmi:id="_NZTlEI_TEeWTOuDx8VYIHQ" version="2.0" module_name="S70031_Weather" module_display_name="S70031_Weather" client_icon_index="48" credentials_cache_key="S70031_Weather_credentials">
+    <nodes xmi:type="xbw:StartFlowStartingPoint" xmi:id="_NZUzM4_TEeWTOuDx8VYIHQ" name="Client-initiated"/>
+    <authentication xmi:type="xbw:StaticDesignTimeAuthentication" xmi:id="_NZUzMo_TEeWTOuDx8VYIHQ"/>
+  </xbw:XmlBobDocument>
+  <notation:Diagram xmi:id="_NZUzMI_TEeWTOuDx8VYIHQ" type="Xbw" element="_NZTlEI_TEeWTOuDx8VYIHQ" name="S70031_Weather.xbw" measurementUnit="Pixel">
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_NZUzMY_TEeWTOuDx8VYIHQ"/>
+  </notation:Diagram>
+</xmi:XMI>

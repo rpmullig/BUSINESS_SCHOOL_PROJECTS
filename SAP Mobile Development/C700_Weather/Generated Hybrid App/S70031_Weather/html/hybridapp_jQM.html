@@ -1,0 +1,331 @@
+﻿<!doctype html>
+<!-- Warning, this file is overwritten with each run of the package generation wizard -->
+<!-- Appearance look and feel.  Provides a more sophisticated look and feel by using the jQueryMobile framework.
+     Supported on all platforms other than Windows Mobile 6.x -->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="format-detection" content="telephone=no">
+        <meta http-equiv="PRAGMA" content="NO-CACHE" />
+        <meta name="viewport" content="minimum-scale=.25, initial-scale=1" />        	
+        <script src="js/PlatformIdentification.js"></script>        	
+        <script src="js/hwc-comms.js"></script>        	
+        <script src="js/API.js"></script>        	
+        <script src="js/hwc-utils.js"></script>        	
+        <script src="js/Utils.js"></script>        	
+        <script src="js/hwc-api.js"></script>        	
+        <script src="js/makit/Sybase.MA-2.2.min.js"></script>        	
+        <script src="js/Callbacks.js"></script>        	
+        <script src="js/Camera.js"></script>        	
+        <script src="js/Certificate.js"></script>        	
+        <script src="js/Custom.js"></script>        	
+        <script src="js/datajs-1.0.3.js"></script>        	
+        <script src="js/ExternalResource.js"></script>        	
+        <script src="js/HybridApp.js"></script>        	
+        <script src="js/jquery/jquery-1.7.1.js"></script>        	
+        <script src="js/jquery/jquery.mobile.custom.js"></script>        	
+        <script src="js/jquery/jquery.mobile-1.1.0.js"></script>        	
+        <script src="js/json2.js"></script>        	
+        <script src="js/makit/jQuery.ui.datepicker.js"></script>        	
+        <script src="js/makit/jquery.ui.datepicker.mobile.js"></script>        	
+        <script src="js/makit/jquery.glob.js"></script>        	
+        <script src="js/makit/locinfo/jQuery.glob.all.js"></script>        	
+        <script src="js/MAKit.js"></script>        	
+        <script src="js/Resources.js"></script>        	
+        <script src="js/SUPStorage.js"></script>        	
+        <script src="js/Timezone.js"></script>        	
+        <script src="js/widgets/sy.ui.iphone.customButton.js"></script>        	
+        <script src="js/widgets/sy.ui.iphone.customFixPositionForm.js"></script>        	
+        <script src="js/widgets/sy.ui.iphone.iscroll4Lite.js"></script>        	
+        <script src="js/widgets/sy.ui.iphone.listview.js"></script>        	
+        <script src="js/widgets/sy.ui.iphone.menuBars.js"></script>        	
+        <script src="js/widgets/sy.ui.iphone.menus.js"></script>        	
+        <script src="js/widgets/sy.ui.iphone.picker.js"></script>        	
+        <script src="js/widgets/sy.ui.iphone.signature.js"></script>        	
+        <script src="js/widgets/sy.ui.iphone.util.js"></script>        	
+        <script src="js/WorkflowMessage.js"></script>        	
+        <link rel="stylesheet" href="css/iphone/actionSheet.css" type="text/css" />        	
+        <link rel="stylesheet" href="css/iphone/customButton.css" type="text/css" />        	
+        <link rel="stylesheet" href="css/iphone/listview.css" type="text/css" />        	
+        <link rel="stylesheet" href="css/iphone/picker.css" type="text/css" />        	
+        <link rel="stylesheet" href="css/iphone/signature.css" type="text/css" />        	
+        <link rel="stylesheet" href="css/iphone/Stylesheet.css" type="text/css" />        	
+        <link rel="stylesheet" href="css/jquery/jquery.mobile-1.1.0.css" type="text/css" />        	
+        <link rel="stylesheet" href="css/jquery/jquery.mobile.fix.css" type="text/css" />        	
+        <link rel="stylesheet" href="css/makit/default.css" type="text/css" />        	
+        <link rel="stylesheet" href="css/makit/digitpicker.css" type="text/css" />        	
+        <link rel="stylesheet" href="css/makit/jquery/jquery.ui.datepicker.css" type="text/css" />        	
+        <link rel="stylesheet" href="css/makit/jquery/jquery.ui.datepicker.mobile.css" type="text/css" />        	
+        <link rel="stylesheet" href="css/makit/chart.css" type="text/css" />        	
+        <script src="js/makit/GlobalizedResource.js"></script>        	
+        <script src="js/makit/jquery/jquery.glob.js"></script>        	
+        <script src="js/makit/jquery/jQuery.ui.datepicker.js"></script>        	
+        <script src="js/makit/jquery/locinfo/jQuery.glob.all.js"></script>        	
+        <script src="js/makit/sap.makit-2.3.min.js"></script>        	
+        <script src="js/makit/sap.makit.lite-2.3.min.js"></script>
+   	
+       	<script type="text/javascript">
+       	    function jqueryMobileOnPageLoad() {
+       	       if ( !hwc.isIOS() ) {     	    
+       	      	    var vp = $( "meta[name='viewport']" );
+             	    vp.attr( "content", 'minimum-scale=1, maximum-scale=1' );
+                }
+               $.mobile.changePage( $('#'+ getCurrentScreen()+'ScreenDiv'), { reverse:false, changeHash: false });
+            }
+        </script>
+       	
+           
+    </head>
+    <body onload="hwc.onHybridAppLoad();">
+<div data-role="page"  data-theme='b'  id="dummy"></div> <!--jquery mobile always show fisrt page, add a dummy empty page; -->
+     
+    <div data-role="page" data-theme='b' id="StartScreenDiv" sup_screen_title="Start" style="; background: #c0c0c0" sup_menuitems="Cancel,Cancel,Select City,Select_CityMenuItemKey" sup_okaction="doCancelAction()" sup_autoarrangemenus="true">
+        
+      <div data-role="header"  data-theme="b" data-position="inline"> 
+       <a href="javascript:void(0)" data-icon="arrow-l" id="StartScreenDivCancel" name="Cancel" onclick="menuItemCallbackStartCancel();"> Cancel</a>
+       <h1>Start</h1> 
+       <a href="javascript:void(0)" id="StartScreenDivSelect_City" name="Select City" onclick="menuItemCallbackStartSelect_CityMenuItemKey();"> Select City</a>
+       
+     </div> 
+     <div data-role="content" class="wrapper" >	
+       <div data-role="scroller">
+
+        <form style="margin: 0px;" name="StartForm" id="StartForm" onSubmit="return false;" autocomplete="on" sup_show_alert_on_validation_error="true">
+          <div class="customTopOfFormStyle"><span id="StartForm_help" class="help"></span></div>
+          <div class="customTopOfFormStyle" id="topOfStartForm"></div>
+        <div id="StartHTMLViewKey" sup_html_type="htmlview">
+                            <h2>Weather App – S70031</h2><br>This app displays both the
+current weather conditions and the weather forecast for cities in the
+United States. The required input is a valid Zip Code.
+        </div>
+
+		  <div class="customBottomOfFormStyle"   id="bottomOfStartForm"></div>       
+        </form>
+       </div>
+     </div>  <!-- end of content -->
+    <div data-role="footer"  data-theme="b" style="display:none" class="ui-bar"></div>
+  
+    </div> <!-- end of screen Start -->
+     
+    <div data-role="page" data-theme='b' id="Weather_ConditionsScreenDiv" sup_screen_title="Weather Conditions" style="; background: #c0c0c0" sup_menuitems="Back,Back" sup_okaction="doCancelAction()" sup_autoarrangemenus="true">
+        
+      <div data-role="header"  data-theme="b" data-position="inline"> 
+       <a href="javascript:void(0)" data-icon="arrow-l" id="Weather_ConditionsScreenDivCancel" name="Cancel" onclick="menuItemCallbackWeather_ConditionsCancel();"> Cancel</a>
+       <h1>Weather Conditions</h1> 
+       <a href="javascript:void(0)" id="Weather_ConditionsScreenDivBack" name="Back" onclick="menuItemCallbackWeather_ConditionsBack();"> Back</a>
+       
+     </div> 
+     <div data-role="content" class="wrapper" >	
+       <div data-role="scroller">
+
+        <form style="margin: 0px;" name="Weather_ConditionsForm" id="Weather_ConditionsForm" onSubmit="return false;" autocomplete="on" sup_show_alert_on_validation_error="true">
+          <div class="customTopOfFormStyle"><span id="Weather_ConditionsForm_help" class="help"></span></div>
+          <div class="customTopOfFormStyle" id="topOfWeather_ConditionsForm"></div>
+          <div class="editbox">
+          <label class="left" for="GetCityWeatherByZIP_state_attribKey">State:</label>
+            <input class="right" type="text" id="GetCityWeatherByZIP_state_attribKey" sup_html_type="text"  sup_max_length="300" sup_num_of_decimals="0" readonly="readonly"/><span id="Weather_Conditions_GetCityWeatherByZIP_state_attribKey_help" class="help"></span>
+          </div>
+ 
+          <div class="editbox">
+          <label class="left" for="GetCityWeatherByZIP_city_attribKey">City:</label>
+            <input class="right" type="text" id="GetCityWeatherByZIP_city_attribKey" sup_html_type="text"  sup_max_length="300" sup_num_of_decimals="0" readonly="readonly"/><span id="Weather_Conditions_GetCityWeatherByZIP_city_attribKey_help" class="help"></span>
+          </div>
+ 
+          <div class="editbox">
+          <label class="left" for="GetCityWeatherByZIP_description_attribKey">Description:</label>
+            <input class="right" type="text" id="GetCityWeatherByZIP_description_attribKey" sup_html_type="text"  sup_max_length="300" sup_num_of_decimals="0" readonly="readonly"/><span id="Weather_Conditions_GetCityWeatherByZIP_description_attribKey_help" class="help"></span>
+          </div>
+ 
+          <div class="editbox">
+          <label class="left" for="GetCityWeatherByZIP_temperature_attribKey">Temperature:</label>
+            <input class="right" type="text" id="GetCityWeatherByZIP_temperature_attribKey" sup_html_type="text"  sup_max_length="300" sup_num_of_decimals="0" readonly="readonly"/><span id="Weather_Conditions_GetCityWeatherByZIP_temperature_attribKey_help" class="help"></span>
+          </div>
+ 
+          <div class="editbox">
+          <label class="left" for="GetCityWeatherByZIP_relativeHumidity_attribKey">RelativeHumidity:</label>
+            <input class="right" type="text" id="GetCityWeatherByZIP_relativeHumidity_attribKey" sup_html_type="text"  sup_max_length="300" sup_num_of_decimals="0" readonly="readonly"/><span id="Weather_Conditions_GetCityWeatherByZIP_relativeHumidity_attribKey_help" class="help"></span>
+          </div>
+ 
+          <div class="editbox">
+          <label class="left" for="GetCityWeatherByZIP_wind_attribKey">Wind:</label>
+            <input class="right" type="text" id="GetCityWeatherByZIP_wind_attribKey" sup_html_type="text"  sup_max_length="300" sup_num_of_decimals="0" readonly="readonly"/><span id="Weather_Conditions_GetCityWeatherByZIP_wind_attribKey_help" class="help"></span>
+          </div>
+ 
+          <div class="editbox">
+          <label class="left" for="GetCityWeatherByZIP_pressure_attribKey">Pressure:</label>
+            <input class="right" type="text" id="GetCityWeatherByZIP_pressure_attribKey" sup_html_type="text"  sup_max_length="300" sup_num_of_decimals="0" readonly="readonly"/><span id="Weather_Conditions_GetCityWeatherByZIP_pressure_attribKey_help" class="help"></span>
+          </div>
+ 
+
+		  <div class="customBottomOfFormStyle"   id="bottomOfWeather_ConditionsForm"></div>       
+        </form>
+       </div>
+     </div>  <!-- end of content -->
+    <div data-role="footer"  data-theme="b" style="display:none" class="ui-bar"></div>
+  
+    </div> <!-- end of screen Weather Conditions -->
+     
+    <div data-role="page" data-theme='b' id="GetCityWeatherByZIPScreenDiv" sup_screen_title="GetCityWeatherByZIP" style="; background: #c0c0c0" sup_menuitems="Current Weather,CurrentWeatherMenuItem,Cancel,Cancel" sup_okaction="doSaveActionWithoutReturn()" sup_autoarrangemenus="true">
+        
+      <div data-role="header"  data-theme="b" data-position="inline"> 
+       <a href="javascript:void(0)" data-icon="arrow-l" id="GetCityWeatherByZIPScreenDivCancel" name="Cancel" onclick="menuItemCallbackGetCityWeatherByZIPCancel();"> Cancel</a>
+       <h1>GetCityWeatherByZIP</h1> 
+       <a href="javascript:void(0)" id="GetCityWeatherByZIPScreenDivCurrent_Weather" name="Current Weather" onclick="menuItemCallbackGetCityWeatherByZIPCurrentWeatherMenuItem();"> Current Weather</a>
+       
+     </div> 
+     <div data-role="content" class="wrapper" >	
+       <div data-role="scroller">
+
+        <form style="margin: 0px;" name="GetCityWeatherByZIPForm" id="GetCityWeatherByZIPForm" onSubmit="return false;" autocomplete="on" sup_show_alert_on_validation_error="true">
+          <div class="customTopOfFormStyle"><span id="GetCityWeatherByZIPForm_help" class="help"></span></div>
+          <div class="customTopOfFormStyle" id="topOfGetCityWeatherByZIPForm"></div>
+          <div class="editbox">
+          <label class="left" for="Enter_ZipEditBoxKey">Enter Zip:</label>
+            <input class="right" type="text" id="Enter_ZipEditBoxKey" sup_html_type="text"  value="46214" sup_default_value="46214" sup_max_length="32767" sup_num_of_decimals="0"/><span id="GetCityWeatherByZIP_Enter_ZipEditBoxKey_help" class="help"></span>
+          </div>
+ 
+
+		  <div class="customBottomOfFormStyle"   id="bottomOfGetCityWeatherByZIPForm"></div>       
+        </form>
+       </div>
+     </div>  <!-- end of content -->
+    <div data-role="footer"  data-theme="b" style="display:none" class="ui-bar"></div>
+  
+    </div> <!-- end of screen GetCityWeatherByZIP -->
+    <div id="blankScreenDiv" style="display: none">
+    </div>
+
+   <script>
+    $(document).ready( function() {
+        if (isBlackBerry5() || isBlackBerry6NonTouchScreen()) {
+            // use the device's date, datetime, or time picker
+        } 
+        else {
+            if (isBlackBerry7()) {
+                var theme = $('div[data-role="page"]').first().attr('data-theme');
+                $('input[type="date"]').attr('data-role', 'none');
+                $('input[type="date"]').addClass("right ui-body-" + theme + " ui-input-text ui-corner-all ui-shadow-inset ui-focus");
+                $('input[type="time"]').attr('data-role', 'none');
+                $('input[type="time"]').addClass("right ui-body-" + theme + " ui-input-text ui-corner-all ui-shadow-inset ui-focus");
+                $('input[type="datetime-local"]').attr('data-role', 'none');
+                $('input[type="datetime-local"]').addClass("right ui-body-" + theme + " ui-input-text ui-corner-all ui-shadow-inset ui-focus");                           
+            }
+            else {
+                $('input[type="date"]:[readonly="readonly"]').attr('disabled','true');
+                $('input[type="time"]:[readonly="readonly"]').attr('disabled','true');
+                $('input[type="datetime-local"]:[readonly="readonly"]').attr('disabled','true');
+
+                /* set date type to readonly, on iphone, the virtual keyboard won't show up, only our datepicker */
+                $('input[type="date"]').attr('readonly','readonly');
+                $('input[type="time"]').attr('readonly','readonly');
+                $('input[type="datetime-local"]').attr('readonly','readonly');
+
+                $('input[type="date"]').datePicker();
+                $('input[type="time"]').timePicker();
+                $('input[type="datetime-local"]').dateTimePicker();
+            }
+            $('input[type="text"]:[readonly="readonly"]').attr('disabled','true');
+            $('input[type="number"]:[readonly="readonly"]').attr('disabled','true');
+        }
+
+        if (!isBlackBerry5()) {
+            $('div.signature input:hidden').signature();
+            $('button').customButton();
+        }
+
+        if (isBlackBerry() || isAndroid()) { /* we don't need header and footer for Blackberry */
+            $('div[data-role="header"]').css('display', 'none');
+            $('div[data-role="footer"]').css('display', 'none');
+
+            UIScreenListeners.push( function(screenObj ) {
+                if ( screenObj.screenToShow &&  screenObj.screenToHide ) {
+                    $.mobile.changePage( $( '#' +  screenObj.screenToShow +'ScreenDiv'),
+                        { reverse:screenObj.isNavigateBack, changeHash: false });
+                }
+            });
+
+           if ( isAndroid() ) {
+               $( 'div[data-role="page"]' ).live( 'pagecreate',function(event) {
+                   $('div[data-role="content"]', this ).scrollview();
+               });
+
+               $( 'div[data-role="dialog"]' ).live( 'pagecreate',function(event) {
+                   $('div[data-role="content"]', this ).scrollview({ isDialog :true});
+               });
+          }
+        } 
+        else {
+            // JQ only init pages when they are active on the first time,
+            // so we have to create the widget only after the page was initialized.
+            $('div[data-role="page"]' ).live( 'pagecreate',function(event) {
+                $('div.[data-role="header"]', this ).menuHeaderBar();
+                $('div.[data-role="footer"]', this ).menuFooterBar();
+                $('div[data-role="content"]', this ).scrollview();
+            });
+
+            $( 'div[data-role="dialog"]' ).live( 'pagecreate',function(event) {
+                $('div[data-role="content"]', this ).scrollview({ isDialog :true});    
+            });
+
+            UIScreenListeners.push( function(screenObj ) {
+                if ( screenObj.screenToShow &&  screenObj.screenToHide ) {
+                    $.mobile.changePage( $( '#' +  screenObj.screenToShow +'ScreenDiv'), 
+                        { reverse:screenObj.isNavigateBack, changeHash: false });
+                }
+           });
+        }
+
+        $('div').live('pageshow',function(event, ui) {
+            var pageId =  $( event.currentTarget).attr('id');
+            if (isBlackBerry() || isAndroid() ) {
+                if ( isBlackBerry() ) {
+                    var cssh = $.mobile.activePage.css("height");
+                    if ( parseInt( cssh ) < screen.height) {
+                        setPageHeight( $.mobile.activePage );
+                    }
+                    //  Refresh listview style when going back to styled page
+                    $('.ui-page-active .ui-listview').listview('refresh');
+                }
+                else if ( isAndroid() ) {
+                    $('div[data-role="content"]',this ).scrollview('refresh');
+                }
+            }
+            else { // this is for iOS 
+                if ($( event.currentTarget).attr('data-role') !=='dialog') {
+                    $('div.[data-role="header"]', this ).menuHeaderBar("positionButtons");
+                    $('div.[data-role="footer"]', this ).menuFooterBar("positionButtons");
+                }
+                $('div[data-role="content"]',this ).scrollview('refresh');
+            }
+
+            // CR693207-1 - customAfterShowScreen was not being fired.
+            // CR693214-1 - prevent calling customAfterShowScreen with "dummy" as the screen to hide.
+            // CR693214-2 - prevent the call when opening the Choice control
+            if (pageId != undefined && ui.prevPage.attr('id') != undefined) {
+                var screenToShow = pageId.replace("ScreenDiv","");
+                var screenToHide = ui.prevPage.attr('id').replace("ScreenDiv","");
+                setCurrentScreen( screenToShow );
+                
+                if ( isAndroid()) {
+                    setTimeout( function() {
+                        afterShowScreen(screenToShow);
+                        customAfterShowScreen( screenToShow,(screenToHide === "dummy")?"":screenToHide);
+                    }, 90);
+                }
+                else {
+                    afterShowScreen(screenToShow);
+                    customAfterShowScreen( screenToShow,(screenToHide === "dummy")?"":screenToHide);
+                }
+            }
+            if ( isAndroid()) {
+                $.mobile.activePage.find( 'textarea[readonly="readonly"]' ).keyup();
+            }
+        });
+    });
+
+ </script>
+
+
+    </body>
+</html>

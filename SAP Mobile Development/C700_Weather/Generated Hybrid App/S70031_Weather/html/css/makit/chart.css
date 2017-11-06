@@ -1,0 +1,302 @@
+/* MS IE 10 Shunt all pointer events to JavaScript code.*/
+html { 
+	-ms-touch-action: none;
+}
+
+.chart {
+	background:#FFFFFF;
+}
+
+.chart_value_bubble {
+	background: #000000;
+	color: #FFFFFF;
+}
+
+.chart_value_bubble_outline
+{
+	background: rgba(128, 128, 128, 0.2);
+	color:#808080;
+}
+
+.chart_range_selector_text {
+	font-size: 12px;
+	font-family:Helvetica;
+	color:#707070;
+}
+
+.chart_titlebar {
+	background: #008FD3
+}
+
+.chart_titlebar > .chart_title {
+	color: #FFFFFF;
+}
+
+.chart_titlebar > .fullscreen_icon {
+	background: url(images/fullscreen_icon.png) no-repeat;
+	cursor:pointer;
+}
+
+.chart_toolbar {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border-bottom: 1px solid #666666;
+	border-top: 1px solid #666666;
+	background: url(images/chartToolbar.png) #666666 repeat-x;
+	white-space: nowrap;
+}
+
+.chart_toolbar > .chart_button {
+	background-color: #666666;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid #333333;
+	display: inline-block;
+	color: #ffffff;
+	font-family:Helvetica;
+	font-weight: bold;
+	font-size: 12px;
+	text-decoration: none;
+	box-shadow:inset 0px 0px 2px 0px #ffffff;
+}
+
+.chart_toolbar  > .chart_button:hover {
+   background: #808080;
+   color: #ccc;
+}
+
+.chart_toolbar  > .chart_button:active {
+   background: #666666;
+}
+
+.chart_toolbar > .table_button {
+	border: 0px;
+	background: url(images/table_icon.png) no-repeat;
+}
+
+.chart_toolbar > .graph_button {
+	border: 0px;
+	background: url(images/graph_icon.png) no-repeat;
+}
+
+.chart_toolbar > .rangeselector_button {
+	border: 0px;
+	background: url(images/rangeselector_icon.png) no-repeat;
+}
+
+.chart_toolbar > .share_button {
+	border: 0px;
+	background: url(images/e-mail_icon.png) no-repeat;
+}
+
+.chart_toolbar > .whatif_button {
+	border: 0px;
+	background: url(images/whatif_icon.png) no-repeat;
+}
+
+.chart_toolbar > .da_button {
+	border: 0px;
+	background: url(images/da_icon.png) no-repeat;
+}
+
+.chart_toolbar h1 {
+	overflow: hidden;
+	margin:auto;
+	font-size: 20px;
+	font-weight: bold;
+	text-shadow: rgba(0, 0, 0, 0.4) 0px -1px 0;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	color: #F0AB00;
+	display:inline;
+}
+
+.chart_breadcrumbs {
+   background: #808080;
+   color: #FFFFFF;
+}
+
+.chart_table {
+	background:#FFFFFF;
+	font-size: 14px;
+	font-family:Helvetica;
+	color:#000000;
+}
+
+.chart_table_dimension_title {
+	background:#DDDDDD;
+}
+
+.chart_table_row_header {
+	background:#DDDDDD;
+}
+
+.chart_table_column_headers {
+	background:#F7F7F7;
+}
+
+.chart_table_contents {
+	background:#F7F7F7;
+}
+
+input[type=date]::-webkit-inner-spin-button{-webkit-appearance: none;}
+
+input[type=number].ui-slider-input {
+	width: 10%;
+	min-width: 60px;
+}
+
+.defaultFillPalette{
+}
+
+.defaultFillPalette  .color1{
+	color: #008fd3;
+}
+.defaultFillPalette  .color2{
+	color: #99d101;
+}
+.defaultFillPalette  .color3{
+	color: #f39b02;
+}
+.defaultFillPalette  .color4{
+	color: #9fcfeb;
+}
+.defaultFillPalette  .color5{
+	color: #4ba707;
+}
+.defaultFillPalette  .color6{
+	color: #f6d133;
+}
+.defaultFillPalette  .color7{
+	color: #cb4c2d;
+}
+.defaultFillPalette  .color8{
+	color: #cac7ba;
+}
+.defaultFillPalette  .color9{
+	color: #0d869c;
+}
+.defaultFillPalette  .color10{
+	color: #cdd72e;
+}	
+.defaultFillPalette  .color11{
+	color: #247230;
+}
+.defaultFillPalette  .color12{
+	color: #6CDEDC;
+}
+.defaultFillPalette  .color13{
+	color: #EB7300;
+}
+.defaultFillPalette  .color14{
+	color: #B9BBD1;
+}
+.defaultFillPalette  .color15{
+	color: #006DD3;
+}
+.defaultFillPalette  .color16{
+	color: #3DB97F;
+}
+
+.defaultStrokePalette{
+}
+.defaultStrokePalette  .color1{
+	color: #00486A;
+}
+.defaultStrokePalette  .color2{
+	color: #4C6800;
+}
+.defaultStrokePalette  .color3{
+	color: #794D01;
+}
+.defaultStrokePalette  .color4{
+	color: #506876;
+}
+.defaultStrokePalette  .color5{
+	color: #255303;
+}
+.defaultStrokePalette  .color6{
+	color: #7BCC19;
+}
+.defaultStrokePalette  .color7{
+	color: #662716;
+}
+.defaultStrokePalette  .color8{
+	color: #65645D;
+}
+.defaultStrokePalette  .color9{
+	color: #06434E;
+}
+.defaultStrokePalette  .color10{
+	color: #666B17;
+}
+.defaultStrokePalette  .color11{
+	color: #123918;
+}
+.defaultStrokePalette  .color12{
+	color: #366F6E;
+}
+.defaultStrokePalette  .color13{
+	color: #763A00;
+}
+.defaultStrokePalette  .color14{
+	color: #5C5D68;
+}
+.defaultStrokePalette  .color15{
+	color: #00376A;
+}
+.defaultStrokePalette  .color16{
+	color: #1F5D40;
+}
+
+.defaultInsetShadowPalette{
+}
+.defaultInsetShadowPalette  .color1{
+	color: #80D6FF;
+}
+.defaultInsetShadowPalette  .color2{
+	color: #D3FF80;
+}
+.defaultInsetShadowPalette  .color3{
+	color: #FFD180;
+}
+.defaultInsetShadowPalette  .color4{
+	color: #D6F0FF;
+}
+.defaultInsetShadowPalette  .color5{
+	color: #B9FF85;
+}
+.defaultInsetShadowPalette  .color6{
+	color: #FFEB99;
+}
+.defaultInsetShadowPalette  .color7{
+	color: #FFB09B;
+}
+.defaultInsetShadowPalette  .color8{
+	color: #FFFEF5;
+}
+.defaultInsetShadowPalette  .color9{
+	color: #89EDFF;
+}
+.defaultInsetShadowPalette  .color10{
+	color: #F9FF9B;
+}
+.defaultInsetShadowPalette  .color11{
+	color: #A8FFB5;
+}
+.defaultInsetShadowPalette  .color12{
+	color: #BEFFFE;
+}
+.defaultInsetShadowPalette  .color13{
+	color: #FFBE80;
+}
+.defaultInsetShadowPalette  .color14{
+	color: #F0F2FF;
+}
+.defaultInsetShadowPalette  .color15{
+	color: #80C1FF;
+}
+.defaultInsetShadowPalette  .color16{
+	color: #AAFFD7;
+}

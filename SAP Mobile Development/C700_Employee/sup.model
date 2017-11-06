@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uepmodels:EMODiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jdbcDatasourceExtension="platform:/resource/com.sybase.uep.datasource/model/JDBCOperationDefinition.ecore" xmlns:uepmodels="platform:/resource/com.sybase.uep.tooling.models/model/uepModels.ecore" modelVersion="2.3.0">
+  <mObjects name="Employee" id="_nEIJUYcTEeWQe4yrWP57hA">
+    <attributes name="emp_id" type="INT" nullable="false" primaryKey="true" fromColumn="//@mObjects.0/@read/@remoteOp/@metaData/@columnInfos.0">
+      <dataType xsi:type="uepmodels:EPrimitiveType" name="INT"/>
+    </attributes>
+    <attributes name="manager_id" type="INT" primaryKey="false" fromColumn="//@mObjects.0/@read/@remoteOp/@metaData/@columnInfos.1">
+      <dataType xsi:type="uepmodels:EPrimitiveType" name="INT"/>
+    </attributes>
+    <attributes name="emp_fname" type="STRING" length="20" nullable="false" primaryKey="false" fromColumn="//@mObjects.0/@read/@remoteOp/@metaData/@columnInfos.2">
+      <dataType xsi:type="uepmodels:EPrimitiveType" name="STRING"/>
+    </attributes>
+    <attributes name="emp_lname" type="STRING" length="20" nullable="false" primaryKey="false" fromColumn="//@mObjects.0/@read/@remoteOp/@metaData/@columnInfos.3">
+      <dataType xsi:type="uepmodels:EPrimitiveType" name="STRING"/>
+    </attributes>
+    <attributes name="dept_id" type="INT" nullable="false" primaryKey="false" fromColumn="//@mObjects.0/@read/@remoteOp/@metaData/@columnInfos.4">
+      <dataType xsi:type="uepmodels:EPrimitiveType" name="INT"/>
+    </attributes>
+    <attributes name="street" type="STRING" length="40" nullable="false" primaryKey="false" fromColumn="//@mObjects.0/@read/@remoteOp/@metaData/@columnInfos.5">
+      <dataType xsi:type="uepmodels:EPrimitiveType" name="STRING"/>
+    </attributes>
+    <attributes name="city" type="STRING" length="20" nullable="false" primaryKey="false" fromColumn="//@mObjects.0/@read/@remoteOp/@metaData/@columnInfos.6">
+      <dataType xsi:type="uepmodels:EPrimitiveType" name="STRING"/>
+    </attributes>
+    <attributes name="state" type="STRING" length="4" nullable="false" primaryKey="false" fromColumn="//@mObjects.0/@read/@remoteOp/@metaData/@columnInfos.7">
+      <dataType xsi:type="uepmodels:EPrimitiveType" name="STRING"/>
+    </attributes>
+    <attributes name="zip_code" type="STRING" length="9" nullable="false" primaryKey="false" fromColumn="//@mObjects.0/@read/@remoteOp/@metaData/@columnInfos.8">
+      <dataType xsi:type="uepmodels:EPrimitiveType" name="STRING"/>
+    </attributes>
+    <attributes name="phone" type="STRING" length="10" primaryKey="false" fromColumn="//@mObjects.0/@read/@remoteOp/@metaData/@columnInfos.9">
+      <dataType xsi:type="uepmodels:EPrimitiveType" name="STRING"/>
+    </attributes>
+    <attributes name="status" type="STRING" length="1" primaryKey="false" fromColumn="//@mObjects.0/@read/@remoteOp/@metaData/@columnInfos.10">
+      <dataType xsi:type="uepmodels:EPrimitiveType" name="STRING"/>
+    </attributes>
+    <attributes name="ss_number" type="STRING" length="11" nullable="false" primaryKey="false" fromColumn="//@mObjects.0/@read/@remoteOp/@metaData/@columnInfos.11">
+      <dataType xsi:type="uepmodels:EPrimitiveType" name="STRING"/>
+    </attributes>
+    <attributes name="salary" type="DECIMAL" precision="20" scale="3" nullable="false" primaryKey="false" fromColumn="//@mObjects.0/@read/@remoteOp/@metaData/@columnInfos.12">
+      <dataType xsi:type="uepmodels:EPrimitiveType" name="DECIMAL"/>
+    </attributes>
+    <attributes name="start_date" type="DATE" nullable="false" primaryKey="false" fromColumn="//@mObjects.0/@read/@remoteOp/@metaData/@columnInfos.13">
+      <dataType xsi:type="uepmodels:EPrimitiveType" name="DATE"/>
+    </attributes>
+    <attributes name="birth_date" type="DATE" primaryKey="false" fromColumn="//@mObjects.0/@read/@remoteOp/@metaData/@columnInfos.15">
+      <dataType xsi:type="uepmodels:EPrimitiveType" name="DATE"/>
+    </attributes>
+    <attributes name="bene_health_ins" type="STRING" length="1" primaryKey="false" fromColumn="//@mObjects.0/@read/@remoteOp/@metaData/@columnInfos.16">
+      <dataType xsi:type="uepmodels:EPrimitiveType" name="STRING"/>
+    </attributes>
+    <attributes name="bene_life_ins" type="STRING" length="1" primaryKey="false" fromColumn="//@mObjects.0/@read/@remoteOp/@metaData/@columnInfos.17">
+      <dataType xsi:type="uepmodels:EPrimitiveType" name="STRING"/>
+    </attributes>
+    <attributes name="bene_day_care" type="STRING" length="1" primaryKey="false" fromColumn="//@mObjects.0/@read/@remoteOp/@metaData/@columnInfos.18">
+      <dataType xsi:type="uepmodels:EPrimitiveType" name="STRING"/>
+    </attributes>
+    <attributes name="sex" type="STRING" length="1" primaryKey="false" fromColumn="//@mObjects.0/@read/@remoteOp/@metaData/@columnInfos.19">
+      <dataType xsi:type="uepmodels:EPrimitiveType" name="STRING"/>
+    </attributes>
+    <read>
+      <remoteOp profileName="My Sample Database">
+        <metaData>
+          <columnInfos nullable="false" name="emp_id" type="INT"/>
+          <columnInfos name="manager_id" type="INT"/>
+          <columnInfos nullable="false" name="emp_fname" type="STRING" length="20"/>
+          <columnInfos nullable="false" name="emp_lname" type="STRING" length="20"/>
+          <columnInfos nullable="false" name="dept_id" type="INT"/>
+          <columnInfos nullable="false" name="street" type="STRING" length="40"/>
+          <columnInfos nullable="false" name="city" type="STRING" length="20"/>
+          <columnInfos nullable="false" name="state" type="STRING" length="4"/>
+          <columnInfos nullable="false" name="zip_code" type="STRING" length="9"/>
+          <columnInfos name="phone" type="STRING" length="10"/>
+          <columnInfos name="status" type="STRING" length="1"/>
+          <columnInfos nullable="false" name="ss_number" type="STRING" length="11"/>
+          <columnInfos nullable="false" name="salary" type="DECIMAL" precision="20" scale="3"/>
+          <columnInfos nullable="false" name="start_date" type="DATE"/>
+          <columnInfos name="termination_date" type="DATE"/>
+          <columnInfos name="birth_date" type="DATE"/>
+          <columnInfos name="bene_health_ins" type="STRING" length="1"/>
+          <columnInfos name="bene_life_ins" type="STRING" length="1"/>
+          <columnInfos name="bene_day_care" type="STRING" length="1"/>
+          <columnInfos name="sex" type="STRING" length="1"/>
+        </metaData>
+        <definition xsi:type="jdbcDatasourceExtension:EJDBCOperationDefinition" sqlQuery="SELECT   emp_id,&#xA;  manager_id,&#xA;  emp_fname,&#xA;  emp_lname,&#xA;  dept_id,&#xA;  street,&#xA;  city,&#xA;  state,&#xA;  zip_code,&#xA;  phone,&#xA;  status,&#xA;  ss_number,&#xA;  salary,&#xA;  start_date,&#xA;  termination_date,&#xA;  birth_date,&#xA;  bene_health_ins,&#xA;  bene_life_ins,&#xA;  bene_day_care,&#xA;  sex FROM sampledb.dba.employee">
+          <method selectedResultSet="//@mObjects.0/@read/@remoteOp/@definition/@method/@resultSets.0">
+            <resultSets name="RESULT SET - 1">
+              <columnInfos name="emp_id" type="INT"/>
+              <columnInfos name="manager_id" type="INT"/>
+              <columnInfos name="emp_fname" type="STRING"/>
+              <columnInfos name="emp_lname" type="STRING"/>
+              <columnInfos name="dept_id" type="INT"/>
+              <columnInfos name="street" type="STRING"/>
+              <columnInfos name="city" type="STRING"/>
+              <columnInfos name="state" type="STRING"/>
+              <columnInfos name="zip_code" type="STRING"/>
+              <columnInfos name="phone" type="STRING"/>
+              <columnInfos name="status" type="STRING"/>
+              <columnInfos name="ss_number" type="STRING"/>
+              <columnInfos name="salary" type="DECIMAL"/>
+              <columnInfos name="start_date" type="DATE"/>
+              <columnInfos name="termination_date" type="DATE"/>
+              <columnInfos name="birth_date" type="DATE"/>
+              <columnInfos name="bene_health_ins" type="STRING"/>
+              <columnInfos name="bene_life_ins" type="STRING"/>
+              <columnInfos name="bene_day_care" type="STRING"/>
+              <columnInfos name="sex" type="STRING"/>
+            </resultSets>
+          </method>
+        </definition>
+      </remoteOp>
+    </read>
+    <namedQuery sqlQuery="SELECT x.* FROM Employee x &#xA;WHERE x.emp_id = :emp_id " name="findByPrimaryKey" isSystem="true">
+      <parameters name="emp_id" type="INT" nullable="false" fromAttribute="//@mObjects.0/@attributes.0">
+        <dataType xsi:type="uepmodels:EPrimitiveType" name="INT" sqlType="4" javaType="int"/>
+      </parameters>
+    </namedQuery>
+    <publish/>
+    <subscribe>
+      <downloadData/>
+    </subscribe>
+  </mObjects>
+  <rootPackage name="/" mObjects="_nEIJUYcTEeWQe4yrWP57hA" bundleVersionHistory="2.3.0.201301212158"/>
+  <personalizationKeys nullable="false" name="username" type="STRING" length="300">
+    <dataType xsi:type="uepmodels:EPrimitiveType" name="STRING" sqlType="12" javaType="java.lang.String"/>
+  </personalizationKeys>
+  <personalizationKeys nullable="false" name="password" type="STRING" length="300">
+    <dataType xsi:type="uepmodels:EPrimitiveType" name="STRING" sqlType="12" javaType="java.lang.String"/>
+  </personalizationKeys>
+  <publications name="Default" mObjects="_nEIJUYcTEeWQe4yrWP57hA" checkInterval="600" default="true"/>
+  <caches name="Default" default="true" mObjects="_nEIJUYcTEeWQe4yrWP57hA">
+    <policy xsi:type="uepmodels:EOnDemandPolicy">
+      <coherenceWindow/>
+    </policy>
+  </caches>
+</uepmodels:EMODiagram>

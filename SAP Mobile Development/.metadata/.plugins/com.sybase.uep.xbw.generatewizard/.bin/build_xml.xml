@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  ======================================================   -->
+<!--  generate, build, deploy and start a Windows Mobile App   -->
+<!--  ======================================================   -->
+<project name="build_wm" basedir=".">
+	<!-- values passed in to this build file -->
+	<property name="logFile" value="unknown"/>
+	<property name="binDir" value="unknown"/>
+	<property name="dotNetVersion" value="unknown" />
+	<property name="solutionDir" value="unknown" />
+	<property name="adminEXE" value="unknown" />
+	<property name="emulatorMgrEXE" value="unknown" />
+	<property name="softOrHard" value="unknown" />
+	<property name="emulatorDll" value="unknown" />
+	<property name="targetPlatform" value="unknown" />
+	<property name="skinID" value="unknown" />
+	<property name="infFileName" value="unknown" />
+	<property name="cabFileName" value="unknown" />
+	<property name="uiProjectName" value="unknown" />
+	<property name="uiAssemblyName" value="unknown" />
+	<property name="loc.of.dot.net" value="unknown" />
+	<property name="loc.of.dot.net.cf" value="unknown" />
+	<property name="dot.net.cf.ver" value="unknown" />
+	<property name="deployment.timeout" value="unknown" />
+	<property name="silent.install" value="unknown" />
+
+	<target name="clean" > 
+		<delete includeemptydirs="true">
+			<fileset dir="${solutionDir}" includes="**/*"/>
+		</delete>
+	</target>
+
+    <target name="activeSyncTest">
+		<echo>Testing to see if there is an active sync connected device</echo>
+		<exec executable="cmd" failonerror="true" dir="${binDir}" output="${logFile}">
+			<arg value="/c" />
+			<arg value="cabDeployer.bat"/>
+			<arg value="testForConnectedDevice"/>
+		</exec>
+	</target>
+	
+	<target name="osArchTest">
+		<echo>Testing to see if the OS is running 32 or 64 bit</echo>
+		<exec executable="cmd" failonerror="true" dir="${binDir}" output="${logFile}">
+			<arg value="/c" />
+			<arg value="OSArchTest.exe"/>
+		</exec>
+	</target>
+	
+	<target name="isCFVersionFound">
+			<echo>Checking to see if the .NET Compact Framework is installed</echo>
+			<exec executable="cmd" failonerror="true" dir="${binDir}" output="${logFile}">
+				<arg value="/c" />
+				<arg value="cabDeployer.bat"/>
+				<arg value="isCFVersionFound"/>
+				<arg value="${dot.net.cf.ver}"/>
+			</exec>
+		</target>
+
+	<target name="runAdmin">
+			<echo>Starting the admin</echo>
+			<exec executable="cmd" dir="${binDir}" spawn="true">
+				<arg value="/c"/>
+				<arg value="run.bat"/>
+				<arg value="${adminEXE}"/>
+			</exec>
+			<echo>Device emulator manager started</echo>
+		</target>
+	
+	<target name="runEmulatorManager">
+		<echo>Starting the device emulator manager</echo>
+		<exec executable="cmd" dir="${binDir}" spawn="true">
+			<arg value="/c"/>
+			<arg value="run.bat"/>
+			<arg value="${emulatorMgrEXE}"/>
+		</exec>
+		<echo>Device emulator manager started</echo>
+	</target>
+	
+	<target name="startDeviceEmulator">
+		<echo>Starting the emulator</echo>
+		<copy file="${emulatorDll}" todir="${binDir}" /> 
+		<exec executable="cmd" dir="${binDir}" output="${logFile}">
+			<arg value="/c"/>
+			<arg value="runEmulator.bat"/>
+			<arg value="start"/>
+			<arg value="${targetPlatform}"/>
+			<arg value="${skinID}"/>
+		</exec>
+		<echo>Emulator started</echo>
+	</target>
+	
+	<target name="resetDeviceEmulator">
+			<echo>restarting the emulator</echo>
+			<exec executable="cmd" dir="${binDir}" output="${logFile}">
+				<arg value="/c"/>
+				<arg value="runEmulator.bat"/>
+				<arg value="reset"/>
+				<arg value="${softOrHard}"/>
+				<arg value="${targetPlatform}"/>
+				<arg value="${skinID}"/>
+			</exec>
+			<echo>Emulator reset</echo>
+		</target>
+
+	<target name="compile">
+		<echo>Starting compile</echo>
+		<exec executable="cmd" dir="${binDir}" output="${logFile}">
+			<arg value="/c"/>
+			<arg value="compile.bat"/>
+			<arg value="${loc.of.dot.net}" />
+			<arg value="${solutionDir}"/>
+		</exec>
+		<echo>Finished compile</echo>
+	</target>
+
+    <target name="createCAB">
+	    <echo>Creating the CAB file</echo>
+	    <echo>commandline: ${cabWizDir}\cabwiz.exe ${inf.file.name}</echo> 
+	    <exec executable="cmd" dir="${binDir}" output="${logFile}">
+			<arg value="/c" />
+			<arg value="cabBuilder.bat" />
+	        <arg value="${cabWizDir}\cabwiz.exe" />
+	        <arg value="${infFileName}" />
+	    </exec>
+  	</target>
+	 
+	<target name="deployCFCAB">
+			<echo>Deploying the Compact Framework to the currently cradled and Active Sync connected device</echo>
+			<exec executable="cmd" failonerror="true" dir="${binDir}" output="${logFile}">
+				<arg value="/c"/>
+				<arg value="cabDeployer.bat"/>
+				<arg value="deployCFCAB"/>
+				<arg value="\Temp"/>
+				<arg value="${dot.net.cf.ver}"/>
+				<arg value="${targetPlatform}"/>
+				<arg value="${loc.of.dot.net.cf}"/>
+				<arg value="${deployment.timeout}"/>
+				<arg value="${silent.install}"/>
+			</exec>
+			<echo>Deployed the compact framework</echo>
+		</target>
+	
+	<target name="deployCab">
+		<echo>Deploying Cab file(s) to the currently cradled and Active Sync connected device</echo>
+		<exec executable="cmd" failonerror="true" dir="${binDir}" output="${logFile}">
+			<arg value="/c"/>
+			<arg value="cabDeployer.bat"/>
+			<arg value="deployAppCAB"/>
+			<arg value="${cabFileName}"/>
+			<arg value="\Temp"/>
+			<arg value="${deployment.timeout}"/>
+			<arg value="${silent.install}"/>
+		</exec>
+		<echo>Cab file(s) deployed</echo>
+	</target>
+	
+	<target name="launchApplication">
+		<echo>Launching application</echo>
+		<exec executable="cmd" failonerror="true" dir="${binDir}" output="${logFile}">
+			<arg value="/c"/>
+			<arg value="cabDeployer.bat"/>
+			<arg value="launchApp"/>
+			<arg value="\Program Files\${uiProjectName}\${uiAssemblyName}.exe"/>
+		</exec>
+		<echo>Application launched</echo>
+	</target>
+</project>

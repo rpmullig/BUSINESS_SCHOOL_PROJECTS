@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Workflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="WorkflowClient.xsd" >
+  <Globals>
+    <DefaultScreens activation="" credentials=""/>
+  </Globals>
+  <Triggers> 
+    <Actions>
+      <Action name="StartEmployeesMenuItemKey" sourcescreen="Start" targetscreen="Employee" errorscreen="">
+        <Methods>
+          <Method name="findAll" type="search" mbo="Employee" package="C700_Employee:1.0" showCredScreenOnAuthFailure="true" >
+            <InputBinding optype="none" opname="findAll" generateOld="false">
+            </InputBinding>
+            <OutputBinding generateOld="true">			    
+              <Mapping workflowKey="Employee" workflowType="list" mboType="list">
+                 <Mapping workflowKey="Employee_emp_id_attribKey" workflowType="number" attribName="emp_id" mboType="int"/>
+                 <Mapping workflowKey="Employee_manager_id_attribKey" workflowType="number" attribName="manager_id" mboType="int"/>
+                 <Mapping workflowKey="Employee_emp_fname_attribKey" workflowType="text" attribName="emp_fname" mboType="string"/>
+                 <Mapping workflowKey="Employee_emp_lname_attribKey" workflowType="text" attribName="emp_lname" mboType="string"/>
+                 <Mapping workflowKey="Employee_dept_id_attribKey" workflowType="number" attribName="dept_id" mboType="int"/>
+                 <Mapping workflowKey="Employee_street_attribKey" workflowType="text" attribName="street" mboType="string"/>
+                 <Mapping workflowKey="Employee_city_attribKey" workflowType="text" attribName="city" mboType="string"/>
+                 <Mapping workflowKey="Employee_state_attribKey" workflowType="text" attribName="state" mboType="string"/>
+                 <Mapping workflowKey="Employee_zip_code_attribKey" workflowType="text" attribName="zip_code" mboType="string"/>
+                 <Mapping workflowKey="Employee_phone_attribKey" workflowType="text" attribName="phone" mboType="string"/>
+                 <Mapping workflowKey="Employee_status_attribKey" workflowType="text" attribName="status" mboType="string"/>
+                 <Mapping workflowKey="Employee_ss_number_attribKey" workflowType="text" attribName="ss_number" mboType="string"/>
+                 <Mapping workflowKey="Employee_salary_attribKey" workflowType="number" attribName="salary" mboType="decimal"/>
+                 <Mapping workflowKey="Employee_start_date_attribKey" workflowType="date" attribName="start_date" mboType="date"/>
+                 <Mapping workflowKey="Employee_birth_date_attribKey" workflowType="date" attribName="birth_date" mboType="date"/>
+                 <Mapping workflowKey="Employee_bene_health_ins_attribKey" workflowType="text" attribName="bene_health_ins" mboType="string"/>
+                 <Mapping workflowKey="Employee_bene_life_ins_attribKey" workflowType="text" attribName="bene_life_ins" mboType="string"/>
+                 <Mapping workflowKey="Employee_bene_day_care_attribKey" workflowType="text" attribName="bene_day_care" mboType="string"/>
+                 <Mapping workflowKey="Employee_sex_attribKey" workflowType="text" attribName="sex" mboType="string"/>
+              </Mapping>
+
+            </OutputBinding>
+          </Method>
+        </Methods>
+      </Action>
+      <Action name="Submit" sourcescreen="Employee" targetscreen="" errorscreen="" asyncRequestErrorScreen="" errorNotificationSubjectLine="" errorNotificationFromLine="" asyncRequestErrorlogs="" asyncRequestErrorLogMessage="" asyncRequestErrorLogMessageAsList="">
+        <Methods>
+          <Method type="replay" mbo="Employee" package="C700_Employee:1.0" showCredScreenOnAuthFailure="true" >
+            <InputBinding optype="none" generateOld="false">			    
+              <Value sourceType="Key" workflowKey="Employee" mboType="list">
+                <InputBinding optype="none">
+                  <Value sourceType="Key" workflowKey="Employee_emp_id_attribKey" attribName="emp_id" mboType="int"/>
+                  <Value sourceType="Key" workflowKey="Employee_manager_id_attribKey" attribName="manager_id" mboType="int"/>
+                  <Value sourceType="Key" workflowKey="Employee_emp_fname_attribKey" attribName="emp_fname" mboType="string"/>
+                  <Value sourceType="Key" workflowKey="Employee_emp_lname_attribKey" attribName="emp_lname" mboType="string"/>
+                  <Value sourceType="Key" workflowKey="Employee_dept_id_attribKey" attribName="dept_id" mboType="int"/>
+                  <Value sourceType="Key" workflowKey="Employee_street_attribKey" attribName="street" mboType="string"/>
+                  <Value sourceType="Key" workflowKey="Employee_city_attribKey" attribName="city" mboType="string"/>
+                  <Value sourceType="Key" workflowKey="Employee_state_attribKey" attribName="state" mboType="string"/>
+                  <Value sourceType="Key" workflowKey="Employee_zip_code_attribKey" attribName="zip_code" mboType="string"/>
+                  <Value sourceType="Key" workflowKey="Employee_phone_attribKey" attribName="phone" mboType="string"/>
+                  <Value sourceType="Key" workflowKey="Employee_status_attribKey" attribName="status" mboType="string"/>
+                  <Value sourceType="Key" workflowKey="Employee_ss_number_attribKey" attribName="ss_number" mboType="string"/>
+                  <Value sourceType="Key" workflowKey="Employee_salary_attribKey" attribName="salary" mboType="decimal"/>
+                  <Value sourceType="Key" workflowKey="Employee_start_date_attribKey" attribName="start_date" mboType="date"/>
+                  <Value sourceType="Key" workflowKey="Employee_birth_date_attribKey" attribName="birth_date" mboType="date"/>
+                  <Value sourceType="Key" workflowKey="Employee_bene_health_ins_attribKey" attribName="bene_health_ins" mboType="string"/>
+                  <Value sourceType="Key" workflowKey="Employee_bene_life_ins_attribKey" attribName="bene_life_ins" mboType="string"/>
+                  <Value sourceType="Key" workflowKey="Employee_bene_day_care_attribKey" attribName="bene_day_care" mboType="string"/>
+                  <Value sourceType="Key" workflowKey="Employee_sex_attribKey" attribName="sex" mboType="string"/>
+                </InputBinding>
+               </Value>
+
+            </InputBinding>
+            <OutputBinding/>
+          </Method>
+        </Methods>
+      </Action>
+    </Actions>
+    <Notifications>
+    </Notifications>
+  </Triggers>
+</Workflow>
+        

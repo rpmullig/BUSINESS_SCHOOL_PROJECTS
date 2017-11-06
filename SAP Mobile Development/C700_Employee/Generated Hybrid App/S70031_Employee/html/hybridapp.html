@@ -1,0 +1,199 @@
+﻿<!doctype html>
+<!-- Warning, this file is overwritten with each run of the package generation wizard -->
+<!-- Performance or minimal look and feel.  Used on Windows Mobile 6.x.  Uses a minimal amount of css.  To use
+     on other platforms modify Window > Preferences > Sybase, Inc > Mobile Development > Hybrid App Designer -->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="format-detection" content="telephone=no">
+        <meta http-equiv="PRAGMA" content="NO-CACHE" />
+        <meta name="viewport" content="minimum-scale=.25, initial-scale=1" />        	
+        <script src="js/PlatformIdentification.js"></script>        	
+        <script src="js/hwc-comms.js"></script>        	
+        <script src="js/API.js"></script>        	
+        <script src="js/hwc-utils.js"></script>        	
+        <script src="js/Utils.js"></script>        	
+        <script src="js/hwc-api.js"></script>        	
+        <script src="js/Callbacks.js"></script>        	
+        <script src="js/Camera.js"></script>        	
+        <script src="js/Certificate.js"></script>        	
+        <script src="js/Custom.js"></script>        	
+        <script src="js/datajs-1.0.3.js"></script>        	
+        <script src="js/ExternalResource.js"></script>        	
+        <script src="js/HybridApp.js"></script>        	
+        <script src="js/json2.js"></script>        	
+        <script src="js/Resources.js"></script>        	
+        <script src="js/SUPStorage.js"></script>        	
+        <script src="js/Timezone.js"></script>        	
+        <script src="js/WorkflowMessage.js"></script>        	
+        <link rel="stylesheet" href="css/Stylesheet.css" type="text/css" />           
+    </head>
+    <body onload="hwc.onHybridAppLoad();">
+    <div id="StartScreenDiv" sup_screen_title="Start" style="display: none; background: #034f84" sup_menuitems="Cancel,Cancel,Employees,StartEmployeesMenuItemKey" sup_okaction="doCancelAction()" sup_autoarrangemenus="true">
+        <script>if (hwc.isIOS()) { document.writeln("<h3 id=\"StartScreenTitle\" class=\"screenTitle\">Start</h3>"); }</script>
+        <ul id="StartScreenDivMenu" class="menu">
+            <li><a class="nav" href="javascript:void(0)" name="Cancel" id="StartCancel" onclick="menuItemCallbackStartCancel();">Cancel</a></li>
+            <li><a class="nav" href="javascript:void(0)" name="Employees" id="StartStartEmployeesMenuItemKey" onclick="menuItemCallbackStartStartEmployeesMenuItemKey();">Employees</a></li>
+        </ul>
+        <form style="margin: 0px;" name="StartForm" id="StartForm" onSubmit="return false;" autocomplete="on" sup_show_alert_on_validation_error="true">         
+        <table class="screen">
+          <tr><td colspan="2"><span id="StartForm_help" class="help"></span></td></tr>
+          <tr><td colspan="2" id="topOfStartForm"></td></tr>
+        </table>
+        <div id="StringHTMLViewKey" sup_html_type="htmlview">
+                            <h2>Employee App – S70031</h2><br>This app displays data about Emloyees.
+
+        </div>
+        <table class="screen">
+         
+          <tr><td colspan="2" id="bottomOfStartForm"></td></tr></table>       
+        </form>  
+    </div> <!-- end of screen Start -->
+    <div id="EmployeeDetailScreenDiv" sup_screen_title="EmployeeDetail" style="display: none" sup_menuitems="Back,Back" sup_okaction="doCancelAction()" sup_autoarrangemenus="true">
+        <script>if (hwc.isIOS()) { document.writeln("<h3 id=\"EmployeeDetailScreenTitle\" class=\"screenTitle\">EmployeeDetail</h3>"); }</script>
+        <ul id="EmployeeDetailScreenDivMenu" class="menu">
+            <li><a class="nav" href="javascript:void(0)" name="Back" id="EmployeeDetailBack" onclick="menuItemCallbackEmployeeDetailBack();">Back</a></li>
+	        <li><a class="nav" href="javascript:void(0)" name="Cancel" id="EmployeeDetailCancel" onclick="menuItemCallbackEmployeeDetailCancel()">Cancel</a></li>
+        </ul>
+        <form style="margin: 0px;" name="EmployeeDetailForm" id="EmployeeDetailForm" onSubmit="return false;" autocomplete="on" sup_show_alert_on_validation_error="true">         
+        <table class="screen">
+          <tr><td colspan="2"><span id="EmployeeDetailForm_help" class="help"></span></td></tr>
+          <tr><td colspan="2" id="topOfEmployeeDetailForm"></td></tr>
+            <tr>
+                <td class="left"><label for="Employee_emp_id_attribKey">Emp id:</label></td>
+                <td class="right">
+                    <input class="right" type="number" id="Employee_emp_id_attribKey" sup_html_type="number"  sup_max_length="32767" sup_min_value="-2147483648" sup_max_value="2147483647" sup_num_of_decimals="0" sup_valid_msg="Invalid data input for field Emp id:" readonly="readonly"/><span id="EmployeeDetail_Employee_emp_id_attribKey_help" class="help"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="left"><label for="Employee_manager_id_attribKey">Manager id:</label></td>
+                <td class="right">
+                    <input class="right" type="number" id="Employee_manager_id_attribKey" sup_html_type="number"  sup_max_length="32767" sup_min_value="-2147483648" sup_max_value="2147483647" sup_num_of_decimals="0" sup_valid_msg="Invalid data input for field Manager id:" readonly="readonly"/><span id="EmployeeDetail_Employee_manager_id_attribKey_help" class="help"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="left"><label for="Employee_emp_fname_attribKey">Emp fname:</label></td>
+                <td class="right">
+                    <input class="right" type="text" id="Employee_emp_fname_attribKey" sup_html_type="text"  sup_max_length="20" sup_num_of_decimals="0" readonly="readonly"/><span id="EmployeeDetail_Employee_emp_fname_attribKey_help" class="help"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="left"><label for="Employee_emp_lname_attribKey">Emp lname:</label></td>
+                <td class="right">
+                    <input class="right" type="text" id="Employee_emp_lname_attribKey" sup_html_type="text"  sup_max_length="20" sup_num_of_decimals="0" readonly="readonly"/><span id="EmployeeDetail_Employee_emp_lname_attribKey_help" class="help"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="left"><label for="Employee_dept_id_attribKey">Dept id:</label></td>
+                <td class="right">
+                    <input class="right" type="number" id="Employee_dept_id_attribKey" sup_html_type="number"  sup_max_length="32767" sup_min_value="-2147483648" sup_max_value="2147483647" sup_num_of_decimals="0" sup_valid_msg="Invalid data input for field Dept id:" readonly="readonly"/><span id="EmployeeDetail_Employee_dept_id_attribKey_help" class="help"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="left"><label for="Employee_street_attribKey">Street:</label></td>
+                <td class="right">
+                    <input class="right" type="text" id="Employee_street_attribKey" sup_html_type="text"  sup_max_length="40" sup_num_of_decimals="0" readonly="readonly"/><span id="EmployeeDetail_Employee_street_attribKey_help" class="help"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="left"><label for="Employee_city_attribKey">City:</label></td>
+                <td class="right">
+                    <input class="right" type="text" id="Employee_city_attribKey" sup_html_type="text"  sup_max_length="20" sup_num_of_decimals="0" readonly="readonly"/><span id="EmployeeDetail_Employee_city_attribKey_help" class="help"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="left"><label for="Employee_state_attribKey">State:</label></td>
+                <td class="right">
+                    <input class="right" type="text" id="Employee_state_attribKey" sup_html_type="text"  sup_max_length="4" sup_num_of_decimals="0" readonly="readonly"/><span id="EmployeeDetail_Employee_state_attribKey_help" class="help"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="left"><label for="Employee_zip_code_attribKey">Zip code:</label></td>
+                <td class="right">
+                    <input class="right" type="text" id="Employee_zip_code_attribKey" sup_html_type="text"  sup_max_length="9" sup_num_of_decimals="0" readonly="readonly"/><span id="EmployeeDetail_Employee_zip_code_attribKey_help" class="help"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="left"><label for="Employee_phone_attribKey">Phone:</label></td>
+                <td class="right">
+                    <input class="right" type="text" id="Employee_phone_attribKey" sup_html_type="text"  sup_max_length="10" sup_num_of_decimals="0" readonly="readonly"/><span id="EmployeeDetail_Employee_phone_attribKey_help" class="help"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="left"><label for="Employee_status_attribKey">Status:</label></td>
+                <td class="right">
+                    <input class="right" type="text" id="Employee_status_attribKey" sup_html_type="text"  sup_max_length="1" sup_num_of_decimals="0" readonly="readonly"/><span id="EmployeeDetail_Employee_status_attribKey_help" class="help"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="left"><label for="Employee_ss_number_attribKey">Ss number:</label></td>
+                <td class="right">
+                    <input class="right" type="text" id="Employee_ss_number_attribKey" sup_html_type="text"  sup_max_length="11" sup_num_of_decimals="0" readonly="readonly"/><span id="EmployeeDetail_Employee_ss_number_attribKey_help" class="help"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="left"><label for="Employee_salary_attribKey">Salary:</label></td>
+                <td class="right">
+                    <input class="right" type="number" id="Employee_salary_attribKey" sup_html_type="number"  sup_max_length="32767" sup_min_value="-1.0E16" sup_max_value="1.0E16" sup_num_of_decimals="3" readonly="readonly"/><span id="EmployeeDetail_Employee_salary_attribKey_help" class="help"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="left"><label for="Employee_start_date_attribKey">Start date:</label></td>
+                <td class="right">
+                    <input class="right" type="date" id="Employee_start_date_attribKey" sup_html_type="date"  sup_max_length="32767" sup_num_of_decimals="0" readonly="readonly"/><span id="EmployeeDetail_Employee_start_date_attribKey_help" class="help"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="left"><label for="Employee_birth_date_attribKey">Birth date:</label></td>
+                <td class="right">
+                    <input class="right" type="date" id="Employee_birth_date_attribKey" sup_html_type="date"  sup_max_length="32767" sup_num_of_decimals="0" readonly="readonly"/><span id="EmployeeDetail_Employee_birth_date_attribKey_help" class="help"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="left"><label for="Employee_bene_health_ins_attribKey">Bene health ins:</label></td>
+                <td class="right">
+                    <input class="right" type="text" id="Employee_bene_health_ins_attribKey" sup_html_type="text"  sup_max_length="1" sup_num_of_decimals="0" readonly="readonly"/><span id="EmployeeDetail_Employee_bene_health_ins_attribKey_help" class="help"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="left"><label for="Employee_bene_life_ins_attribKey">Bene life ins:</label></td>
+                <td class="right">
+                    <input class="right" type="text" id="Employee_bene_life_ins_attribKey" sup_html_type="text"  sup_max_length="1" sup_num_of_decimals="0" readonly="readonly"/><span id="EmployeeDetail_Employee_bene_life_ins_attribKey_help" class="help"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="left"><label for="Employee_bene_day_care_attribKey">Bene day care:</label></td>
+                <td class="right">
+                    <input class="right" type="text" id="Employee_bene_day_care_attribKey" sup_html_type="text"  sup_max_length="1" sup_num_of_decimals="0" readonly="readonly"/><span id="EmployeeDetail_Employee_bene_day_care_attribKey_help" class="help"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="left"><label for="Employee_sex_attribKey">Sex:</label></td>
+                <td class="right">
+                    <input class="right" type="text" id="Employee_sex_attribKey" sup_html_type="text"  sup_max_length="1" sup_num_of_decimals="0" readonly="readonly"/><span id="EmployeeDetail_Employee_sex_attribKey_help" class="help"></span>
+                </td>
+            </tr>
+         
+          <tr><td colspan="2" id="bottomOfEmployeeDetailForm"></td></tr></table>       
+        </form>  
+    </div> <!-- end of screen EmployeeDetail -->
+    <div id="EmployeeScreenDiv" sup_screen_title="Employee" style="display: none" sup_menuitems="Submit,Submit,Cancel,Cancel" sup_okaction="doSaveActionWithoutReturn()" sup_autoarrangemenus="true">
+        <script>if (hwc.isIOS()) { document.writeln("<h3 id=\"EmployeeScreenTitle\" class=\"screenTitle\">Employee</h3>"); }</script>
+        <ul id="EmployeeScreenDivMenu" class="menu">
+            <li><a class="nav" href="javascript:void(0)" name="Submit" id="EmployeeSubmit" onclick="menuItemCallbackEmployeeSubmit();">Submit</a></li>
+            <li><a class="nav" href="javascript:void(0)" name="Cancel" id="EmployeeCancel" onclick="menuItemCallbackEmployeeCancel();">Cancel</a></li>
+        </ul>
+        <form style="margin: 0px;" name="EmployeeForm" id="EmployeeForm" onSubmit="return false;" autocomplete="on" sup_show_alert_on_validation_error="true">         
+        <table class="screen">
+          <tr><td colspan="2"><span id="EmployeeForm_help" class="help"></span></td></tr>
+          <tr><td colspan="2" id="topOfEmployeeForm"></td></tr>
+            <tr><td colspan="2"><ul class="listview" id="Employee" wrap_data="false" cells="EmployeeDetail&?null&?&?true&?Employee_emp_id_attribKey&,20&,ID&,normal&,NUMBER&, &, &,Employee_emp_fname_attribKey&,30&,First&,normal&,TEXT&, &, &,Employee_emp_lname_attribKey&,40&,Last&,normal&,TEXT&, &, "></ul></td></tr>
+         
+          <tr><td colspan="2" id="bottomOfEmployeeForm"></td></tr></table>       
+        </form>  
+    </div> <!-- end of screen Employee -->
+    <div id="blankScreenDiv" style="display: none">
+    </div>
+    </body>
+</html>

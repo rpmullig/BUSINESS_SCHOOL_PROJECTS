@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:xbw="http://xbw/1.0">
+  <xbw:XmlBobDocument xmi:id="_NZTlEI_TEeWTOuDx8VYIHQ" version="2.0.1" module_name="S70031_Weather" module_display_name="S70031_Weather" client_icon_index="48" domain="C700" credentials_cache_key="S70031_Weather_credentials">
+    <nodes xmi:type="xbw:StartFlowStartingPoint" xmi:id="_NZUzM4_TEeWTOuDx8VYIHQ" name="Client-initiated"/>
+    <nodes xmi:type="xbw:Screen" xmi:id="_NbsKsI_TEeWTOuDx8VYIHQ" name="Start" key="Start">
+      <menu xmi:type="xbw:Menu" xmi:id="_NbsKsY_TEeWTOuDx8VYIHQ">
+        <menuItems xmi:type="xbw:MenuItem" xmi:id="_NckUcI_TEeWTOuDx8VYIHQ" name="Cancel">
+          <action xmi:type="xbw:CancelAction" xmi:id="_NckUdI_TEeWTOuDx8VYIHQ" key="Cancel"/>
+        </menuItems>
+      </menu>
+      <display xmi:type="xbw:Display" xmi:id="_NbsKso_TEeWTOuDx8VYIHQ"/>
+      <okaction xmi:type="xbw:CancelAction" xmi:id="_NcuFcI_TEeWTOuDx8VYIHQ"/>
+      <screenActions xmi:type="xbw:ScreenActions" xmi:id="_NbsKtI_TEeWTOuDx8VYIHQ"/>
+    </nodes>
+    <navigations xmi:type="xbw:GotoNavigation" xmi:id="_NczlAI_TEeWTOuDx8VYIHQ" end="_NbsKsI_TEeWTOuDx8VYIHQ" start="_NZUzM4_TEeWTOuDx8VYIHQ"/>
+    <authentication xmi:type="xbw:StaticDesignTimeAuthentication" xmi:id="_NZUzMo_TEeWTOuDx8VYIHQ"/>
+  </xbw:XmlBobDocument>
+  <notation:Diagram xmi:id="_NZUzMI_TEeWTOuDx8VYIHQ" type="Xbw" element="_NZTlEI_TEeWTOuDx8VYIHQ" name="S70031_Weather.xbw" measurementUnit="Pixel">
+    <children xmi:type="notation:Shape" xmi:id="_NaX8EI_TEeWTOuDx8VYIHQ" type="2006" element="_NZUzM4_TEeWTOuDx8VYIHQ" fontName="Segoe UI">
+      <children xmi:type="notation:DecorationNode" xmi:id="_NaX8E4_TEeWTOuDx8VYIHQ" type="5006"/>
+      <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_NaX8EY_TEeWTOuDx8VYIHQ"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NaX8Eo_TEeWTOuDx8VYIHQ" x="45" y="30"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_NbsxwI_TEeWTOuDx8VYIHQ" type="2002" element="_NbsKsI_TEeWTOuDx8VYIHQ">
+      <children xmi:type="notation:DecorationNode" xmi:id="_NbsxxY_TEeWTOuDx8VYIHQ" type="5002"/>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_NbsxwY_TEeWTOuDx8VYIHQ"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_Nbsxwo_TEeWTOuDx8VYIHQ" fontColor="16777215" fontName="Segoe UI"/>
+      <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_Nbsxw4_TEeWTOuDx8VYIHQ" diagramLink="_Nb-ekI_TEeWTOuDx8VYIHQ" hint="XbwScreen"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NbsxxI_TEeWTOuDx8VYIHQ" x="30" y="130" width="110" height="85"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_NZUzMY_TEeWTOuDx8VYIHQ"/>
+    <edges xmi:type="notation:Edge" xmi:id="_Nc0MEI_TEeWTOuDx8VYIHQ" type="4001" element="_NczlAI_TEeWTOuDx8VYIHQ" source="_NaX8EI_TEeWTOuDx8VYIHQ" target="_NbsxwI_TEeWTOuDx8VYIHQ">
+      <styles xmi:type="notation:RoutingStyle" xmi:id="_Nc0MEY_TEeWTOuDx8VYIHQ"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_Nc0MEo_TEeWTOuDx8VYIHQ" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Nc0ME4_TEeWTOuDx8VYIHQ" points="[0, 0, 0, -60]$[0, 60, 0, 0]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_NfcCQI_TEeWTOuDx8VYIHQ" id="(0.5,1.0)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_NfcCQY_TEeWTOuDx8VYIHQ" id="(0.5,0.0)"/>
+    </edges>
+  </notation:Diagram>
+  <notation:Diagram xmi:id="_Nb-ekI_TEeWTOuDx8VYIHQ" type="XbwScreen" element="_NbsKsI_TEeWTOuDx8VYIHQ" measurementUnit="Pixel">
+    <children xmi:type="notation:Shape" xmi:id="_NcCI8I_TEeWTOuDx8VYIHQ" type="2101" element="_NbsKso_TEeWTOuDx8VYIHQ" fontName="Segoe UI">
+      <children xmi:type="notation:DecorationNode" xmi:id="_NcCI8o_TEeWTOuDx8VYIHQ" type="7101"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NcCI8Y_TEeWTOuDx8VYIHQ" x="10" y="10"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_NcCI84_TEeWTOuDx8VYIHQ" type="2102" element="_NbsKsY_TEeWTOuDx8VYIHQ" fontName="Segoe UI" fillColor="12416338">
+      <children xmi:type="notation:DecorationNode" xmi:id="_NcCI9Y_TEeWTOuDx8VYIHQ" type="7102">
+        <children xmi:type="notation:Shape" xmi:id="_NckUcY_TEeWTOuDx8VYIHQ" type="3103" element="_NckUcI_TEeWTOuDx8VYIHQ" fontName="Segoe UI">
+          <children xmi:type="notation:DecorationNode" xmi:id="_NckUc4_TEeWTOuDx8VYIHQ" type="5106"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NckUco_TEeWTOuDx8VYIHQ"/>
+        </children>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_NcCI9o_TEeWTOuDx8VYIHQ"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_NcCI94_TEeWTOuDx8VYIHQ"/>
+      </children>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NcCI9I_TEeWTOuDx8VYIHQ" x="225" y="10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_NcCI-I_TEeWTOuDx8VYIHQ" type="2103" element="_NbsKtI_TEeWTOuDx8VYIHQ">
+      <children xmi:type="notation:DecorationNode" xmi:id="_NcCI_I_TEeWTOuDx8VYIHQ" type="7103">
+        <styles xmi:type="notation:SortingStyle" xmi:id="_NcCI_Y_TEeWTOuDx8VYIHQ"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_NcCI_o_TEeWTOuDx8VYIHQ"/>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_NcCI-Y_TEeWTOuDx8VYIHQ"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_NcCI-o_TEeWTOuDx8VYIHQ" fontName="Segoe UI"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NcCI-4_TEeWTOuDx8VYIHQ" x="225" y="125"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_Nb-ekY_TEeWTOuDx8VYIHQ"/>
+  </notation:Diagram>
+</xmi:XMI>

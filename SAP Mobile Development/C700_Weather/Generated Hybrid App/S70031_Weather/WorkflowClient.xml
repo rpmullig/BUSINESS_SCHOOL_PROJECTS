@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Workflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="WorkflowClient.xsd" >
+  <Globals>
+    <DefaultScreens activation="" credentials=""/>
+  </Globals>
+  <Triggers> 
+    <Actions>
+      <Action name="CurrentWeatherMenuItem" sourcescreen="GetCityWeatherByZIP" targetscreen="Weather_Conditions" errorscreen="">
+        <Methods>
+          <Method name="FindByZip" type="search" mbo="GetCityWeatherByZIP" package="C700_Weather:1.0" showCredScreenOnAuthFailure="true" >
+            <InputBinding optype="none" opname="FindByZip" generateOld="false">
+              <Value sourceType="Key" workflowKey="Enter_ZipEditBoxKey" paramName="ZipParam" attribName="ZipCode" mboType="string"/>
+			
+              <Value sourceType="Key" workflowKey="Enter_ZipEditBoxKey" pkName="ZipPK" mboType="string"/>		    		
+            </InputBinding>
+            <OutputBinding generateOld="true">			    
+              <Mapping workflowKey="GetCityWeatherByZIP_ZipCode_attribKey" workflowType="text" attribName="ZipCode" mboType="string"/>
+              <Mapping workflowKey="GetCityWeatherByZIP_state_attribKey" workflowType="text" attribName="state" mboType="string"/>
+              <Mapping workflowKey="GetCityWeatherByZIP_city_attribKey" workflowType="text" attribName="city" mboType="string"/>
+              <Mapping workflowKey="GetCityWeatherByZIP_description_attribKey" workflowType="text" attribName="description" mboType="string"/>
+              <Mapping workflowKey="GetCityWeatherByZIP_temperature_attribKey" workflowType="text" attribName="temperature" mboType="string"/>
+              <Mapping workflowKey="GetCityWeatherByZIP_relativeHumidity_attribKey" workflowType="text" attribName="relativeHumidity" mboType="string"/>
+              <Mapping workflowKey="GetCityWeatherByZIP_wind_attribKey" workflowType="text" attribName="wind" mboType="string"/>
+              <Mapping workflowKey="GetCityWeatherByZIP_pressure_attribKey" workflowType="text" attribName="pressure" mboType="string"/>
+
+            </OutputBinding>
+          </Method>
+        </Methods>
+      </Action>
+    </Actions>
+    <Notifications>
+    </Notifications>
+  </Triggers>
+</Workflow>
+        

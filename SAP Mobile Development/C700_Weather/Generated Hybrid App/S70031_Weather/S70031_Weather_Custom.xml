@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget>
+  <screens src="html/hybridapp_Custom.html" default="Start">
+    <screen key="html/hybridapp_Custom.html">
+    </screen>
+  </screens>
+  <scrolling>0</scrolling>
+  
+</widget>
